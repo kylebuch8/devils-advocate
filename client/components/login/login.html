@@ -1,0 +1,17 @@
+<md-content class="login-container md-padding" layout="column" layout-align="center center">
+    <div class="logo" layout="column" layout-align="center center">
+        <h1>Devil's Advocate</h1>
+        <img src="images/devil.svg">
+    </div>
+    <form class="login" name="loginForm" ng-submit="loginForm.$valid && login()">
+        <md-input-container class="md-block">
+            <label>Email</label>
+            <input type="email" ng-model="user.email" required>
+        </md-input-container>
+        <md-input-container class="md-block">
+            <label>Password</label>
+            <input type="password" ng-model="user.password" required>
+        </md-input-container>
+        <md-button type="submit" class="md-warn md-raised md-hue-2">Login</md-button>
+    </form>
+</md-content>

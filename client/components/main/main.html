@@ -1,0 +1,20 @@
+<md-content class="main" ng-if="group" layout="column">
+    <div>
+        <div class="logo" layout="column" layout-align="center center">
+            <h1>Devil's Advocate</h1>
+            <img src="images/devil.svg">
+        </div>
+    </div>
+    <div class="frame md-whiteframe-6dp">
+        <p class="lead">Once a week, have a randomly selected group member receive an email letting them know that they'll play the role of devil's advocate for the week.</p>
+        <h4>Group Members</h4>
+        <ol>
+            <li ng-repeat="member in group.members">{{::member}}</li>
+        </ol>
+
+        <md-switch class="md-warn md-hue-2" ng-model="group.sendEmail" aria-label="Send devil's advocate email switch" ng-change="toggleEmail()">
+            <span ng-if="!group.sendEmail">Not Sending A Weekly Email</span>
+            <span ng-if="group.sendEmail">Sending A Weekly Email</span>
+        </md-switch>
+    </div>
+</md-content>
