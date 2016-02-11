@@ -1,0 +1,24 @@
+{
+  "name": "devils-advocate",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Kyle Buchanan <kylebuch8@gmail.com>"
+  ],
+  "license": "ISC",
+  "moduleType": [],
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "client/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-cookies": "~1.5.0",
+    "angular-material": "~1.0.5",
+    "angular-route": "~1.5.0"
+  }
+}
