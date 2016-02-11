@@ -16,8 +16,8 @@ const MONGO_URI = process.env.MONGOLAB_URI;
 Mongoose.connect(MONGO_URI + '/devil');
 
 server.connection({
-    host: 'localhost',
-    port: '8080'
+    host: process.env.HOST || 'localhost',
+    port: process.env.PORT || '8080'
 });
 
 server.state('data', {
