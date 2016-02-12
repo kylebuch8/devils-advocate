@@ -31,7 +31,7 @@ Mongoose.connect(MONGO_URI + '/devil', (err) => {
             let randomEmail = emailAddresses[Math.floor(Math.random() * emailAddresses.length)];
 
             console.log(randomEmail);
-            let randomEmail = 'kylebuch8@gmail.com';
+            randomEmail = 'kylebuch8@gmail.com';
 
             var message = {
                 'text': 'Lucky you!\n\n' +
