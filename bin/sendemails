@@ -10,7 +10,7 @@ if (!process.env.MANDRILL_API_KEY) {
 
 const mandrillClient = new mandrill.Mandrill(process.env.MANDRILL_API_KEY);
 const Mongoose = require('mongoose');
-const Group = require('./models/group');
+const Group = require('../models/group');
 const MONGO_URI = process.env.MONGOLAB_URI;
 
 Mongoose.connect(MONGO_URI + '/devil', (err) => {
