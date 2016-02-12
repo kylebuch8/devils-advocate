@@ -16,8 +16,7 @@ const MONGO_URI = process.env.MONGOLAB_URI;
  * only run on sunday (6)
  */
 let today = new Date();
-if (today.getDay() !== 4) {
-    console.log(today.getDay());
+if (today.getDay() !== 6) {
     console.log('It\'s not Sunday!');
     process.exit();
 }
@@ -39,9 +38,6 @@ Mongoose.connect(MONGO_URI + '/devil', (err) => {
         groups.forEach((group) => {
             let emailAddresses = group.members;
             let randomEmail = emailAddresses[Math.floor(Math.random() * emailAddresses.length)];
-
-            console.log(randomEmail);
-            randomEmail = 'kylebuch8@gmail.com';
 
             var message = {
                 'text': 'Lucky you!\n\n' +
