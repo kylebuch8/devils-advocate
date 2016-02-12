@@ -17,6 +17,7 @@ const MONGO_URI = process.env.MONGOLAB_URI;
  */
 let today = new Date();
 if (today.getDay() !== 4) {
+    console.log(today.getDay());
     console.log('It\'s not Sunday!');
     process.exit();
 }
