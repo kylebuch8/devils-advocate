@@ -12,6 +12,15 @@ const Mongoose = require('mongoose');
 const Group = require('../models/group');
 const MONGO_URI = process.env.MONGOLAB_URI;
 
+/*
+ * only run on sunday (6)
+ */
+let today = new Date();
+if (today.getDay() !== 6) {
+    console.log('It\'s not Sunday!');
+    process.exit();
+}
+
 Mongoose.connect(MONGO_URI + '/devil', (err) => {
     if (err) {
         console.log(err);
