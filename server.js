@@ -54,7 +54,10 @@ server.register(require('inert'), (err) => {
 
             Group.findOne({
                 members: {
-                    $in: [request.payload.email]
+                    $elemMatch: {
+                        $regex: request.payload.email,
+                        $options: 'i'
+                    }
                 }
             }, (err, group) => {
                 if (err) {
